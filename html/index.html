@@ -55,10 +55,11 @@
           }])
         },
         getPrize: function (callback) {
+        	var info = [0,1,2,3,4,5];	//要选择的物品的id
+        	var rand = Math.random() * 6 >>> 0;	//产生一个随机数
           // 获取选餐信息
-          var num = Math.random() * 6 >>> 0, //物品ID(随机数)
-            chances = num; // 可抽奖次数
-          callback && callback([num, chances]);
+          var num = info[rand]; //根据随机数选择物品
+          callback && callback([num, 1]);	//3次抽奖机会
         },
         gotBack: function (data) {
           alert('今天中午吃' + data);
