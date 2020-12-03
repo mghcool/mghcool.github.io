@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.0.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/blog/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
 
 
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Gemini',
     version: '7.5.0',
     exturl: false,
@@ -116,7 +116,7 @@
   <div class="site-meta">
 
     <div>
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">E=mc²</span>
         <span class="logo-line-after"><i></i></span>
@@ -140,27 +140,27 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+    <a href="/blog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
   </ul>
@@ -189,10 +189,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.png">
+      <meta itemprop="image" content="/blog/images/%E5%A4%B4%E5%83%8F.png">
       <meta itemprop="name" content="mgh">
       <meta itemprop="description" content="个人博客">
     </span>
@@ -203,7 +203,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/" class="post-title-link" itemprop="url">Github配置SSH</a>
+            <a href="/blog/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/" class="post-title-link" itemprop="url">Github配置SSH</a>
         </h1>
 
         <div class="post-meta">
@@ -228,7 +228,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%94%BB%E7%95%A5/" itemprop="url" rel="index">
+                  <a href="/blog/categories/%E6%94%BB%E7%95%A5/" itemprop="url" rel="index">
                     <span itemprop="name">攻略</span>
                   </a>
                 </span>
@@ -248,7 +248,7 @@
           <p>SSH<a href="https://www.jianshu.com/p/3c52fd42d7fe" target="_blank" rel="noopener">链接</a></p><h1 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h1><p>1、首先进入用户主目录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/</span><br></pre></td></tr></table></figure><p>2、查看用户主目录下有没有<code>.SSH</code>文件夹(隐藏)，如果有，再查看这个文件夹下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果都有，即可进行下一步。<br>如果没有<code>.SSH</code>文件夹，那么在用户主目录下运行以下代码来创建SSH Key</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/#more" rel="contents">
+              <a class="btn" href="/blog/2018/08/26/Github%E9%85%8D%E7%BD%AESSH/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -272,10 +272,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.png">
+      <meta itemprop="image" content="/blog/images/%E5%A4%B4%E5%83%8F.png">
       <meta itemprop="name" content="mgh">
       <meta itemprop="description" content="个人博客">
     </span>
@@ -286,7 +286,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">在安卓上用Termux搭建Hexo博客</a>
+            <a href="/blog/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">在安卓上用Termux搭建Hexo博客</a>
         </h1>
 
         <div class="post-meta">
@@ -311,7 +311,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%94%BB%E7%95%A5/" itemprop="url" rel="index">
+                  <a href="/blog/categories/%E6%94%BB%E7%95%A5/" itemprop="url" rel="index">
                     <span itemprop="name">攻略</span>
                   </a>
                 </span>
@@ -331,7 +331,7 @@
           <h1 id="下载Termux"><a href="#下载Termux" class="headerlink" title="下载Termux"></a>下载Termux</h1><p>（1）Termux可以到谷歌商店下载(需要科学上网),也可以到<a href="https://termux.com/" target="_blank" rel="noopener">官网</a>下载，安装完成后打开，软件自动安装<br>（2）按<strong>音量上键+q</strong>可以打开辅助键盘</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+              <a class="btn" href="/blog/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -355,10 +355,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.png">
+      <meta itemprop="image" content="/blog/images/%E5%A4%B4%E5%83%8F.png">
       <meta itemprop="name" content="mgh">
       <meta itemprop="description" content="个人博客">
     </span>
@@ -369,7 +369,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">MarkDown语法</a>
+            <a href="/blog/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">MarkDown语法</a>
         </h1>
 
         <div class="post-meta">
@@ -394,7 +394,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
+                  <a href="/blog/categories/%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
                     <span itemprop="name">语法</span>
                   </a>
                 </span>
@@ -414,7 +414,7 @@
           <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>代码：</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line">## H2</span><br><span class="line">### H3</span><br><span class="line">#### H4</span><br><span class="line">##### H5</span><br><span class="line">###### H6</span><br></pre></td></tr></table></figure><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/#more" rel="contents">
+              <a class="btn" href="/blog/2018/08/23/MarkDown%E8%AF%AD%E6%B3%95/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -438,7 +438,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span>
   </nav>
 
 
@@ -475,27 +475,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="site-author-image" itemprop="image" alt="mgh"
-    src="/images/%E5%A4%B4%E5%83%8F.png">
+    src="/blog/images/%E5%A4%B4%E5%83%8F.png">
   <p class="site-author-name" itemprop="name">mgh</p>
   <div class="site-description" itemprop="description">个人博客</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+          <a href="/blog/archives/">
         
           <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+            <a href="/blog/categories/">
           
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/blog/tags/">
           
         <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
@@ -559,12 +559,12 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/pisces.js"></script>
-<script src="/js/next-boot.js"></script>
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/blog/js/next-boot.js"></script>
 
 
 
