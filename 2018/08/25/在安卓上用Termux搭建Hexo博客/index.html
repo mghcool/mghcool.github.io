@@ -58,10 +58,10 @@
 <meta property="og:site_name" content="E&#x3D;mc²">
 <meta property="og:description" content="下载Termux（1）Termux可以到谷歌商店下载(需要科学上网),也可以到官网下载，安装完成后打开，软件自动安装（2）按音量上键+q可以打开辅助键盘">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/images/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/npminstall.png">
-<meta property="og:updated_time" content="2020-12-17T03:14:09.787Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/npminstall.png">
+<meta property="og:updated_time" content="2020-12-17T04:33:55.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/images/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/npminstall.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/npminstall.png">
 
 <link rel="canonical" href="http://yoursite.com/2018/08/25/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">
 
@@ -222,7 +222,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-17 11:14:09" itemprop="dateModified" datetime="2020-12-17T11:14:09+08:00">2020-12-17</time>
+                <time title="修改时间：2020-12-17 12:33:55" itemprop="dateModified" datetime="2020-12-17T12:33:55+08:00">2020-12-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,7 +254,7 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="string">http:</span><span class="comment">//mirrors.tuna.tsinghua.edu.cn/termux stable main</span></span><br></pre></td></tr></table></figure>
 <p>(3)然后更新<code>pkg update</code></p>
 <h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg <span class="keyword">install</span> nodejs</span><br></pre></td></tr></table></figure>
-<p>安装完后使用<code>npm install</code>可能会出现如下问题<br><img src="./images/%E5%9C%A8%E5%AE%89%E5%8D%93%E4%B8%8A%E7%94%A8Termux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/npminstall.png" alt><br>解决办法是修改farm.js</p>
+<p>安装完后使用<code>npm install</code>可能会出现如下问题<br><img src="npminstall.png" alt><br>解决办法是修改farm.js</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi $PREFIX/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/<span class="title">npm</span>/<span class="title">node_modules</span>/<span class="title">worker</span>-<span class="title">farm</span>/<span class="title">lib</span>/<span class="title">farm</span>.<span class="title">js</span></span></span><br></pre></td></tr></table></figure>
 <p>将下面代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> DEFAULT_OPTIONS = &#123;</span><br><span class="line">           maxCallsPerWorker           : <span class="literal">Infinity</span></span><br><span class="line">         , <span class="attr">maxConcurrentWorkers</span>        : <span class="built_in">require</span>(<span class="string">'os'</span>).cpus().length</span><br></pre></td></tr></table></figure>
@@ -346,7 +346,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
