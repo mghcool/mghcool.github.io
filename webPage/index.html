@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.85, minimum-scale=0, maximum-scale=1.0"/>
+  <title>中午吃点啥</title>
+  <link rel="stylesheet" href="css/typo/typo.css">
+  <link rel="stylesheet" href="css/GB-canvas-turntable.css">
+  <style>
+    .wrapper {
+      padding: 20px 40px;
+    }
+    .gb-turntable a.gb-turntable-btn {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+<br><br><br><br>	<br>
+<center>
+  <div class="wrapper typo" id="wrapper">
+    <section id="turntable" class="gb-turntable">
+      <div class="gb-turntable-container">
+        <canvas class="gb-turntable-canvas" width="300px" height="300px"></canvas>
+      </div>
+      <a class="gb-turntable-btn" href="javascript:;">选餐</a>
+    </section>
+  </div>
+</center>
+
+  <script src="js/GB-canvas-turntable.js"></script>
+  <script>
+  	document.getElementsByTagName('body')[0].style.zoom=0;
+    document.addEventListener('DOMContentLoaded', function () {
+      gbTurntable.init({
+        id: 'turntable',
+        config: function (callback) {
+          // 获取奖品信息
+          callback && callback([{
+            text: '板面',
+            //img: 'images/redpacket.png'
+          }, {
+            text: '兰州拉面'
+          }, {
+            text: '刀削面'
+          }, {
+            text: '大盘鸡',
+            //img: 'images/display.png'
+          }, {
+            text: '肉火烧'
+          }, {
+            text: '屁'
+          }])
+        },
+        getPrize: function (callback) {
+        	var info = [0,1,2,3,4,5];	//要选择的物品的id
+        	var rand = Math.random() * 6 >>> 0;	//产生一个随机数
+          // 获取选餐信息
+          var num = info[rand]; //根据随机数选择物品
+          callback && callback([num, 1]);	//3次抽奖机会
+        },
+        gotBack: function (data) {
+          alert('今天中午吃' + data);
+        }
+      });
+    }, false);
+  </script>
+</body>
+
+</html>
